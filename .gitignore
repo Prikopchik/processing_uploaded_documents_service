@@ -1,0 +1,36 @@
+# Python & Django
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+
+# Virtual environments
+venv/
+.venv/
+
+# Django static/media
+staticfiles/
+media/
+
+# IDE/editor
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Env & secrets
+.env
+.env.*
+
+# Coverage / pytest
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Docker artifacts
+/postgres_data/
+
+

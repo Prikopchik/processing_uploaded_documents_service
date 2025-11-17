@@ -1,0 +1,72 @@
+#############################################
+# Общие настройки Django
+#############################################
+
+# Секретный ключ Django.
+SECRET_KEY=django_secret_key
+
+# Режим отладки: 1 для разработки, 0 для продакшена.
+DEBUG=1
+
+#############################################
+# Настройки базы данных PostgreSQL
+#############################################
+
+# Имя базы данных
+POSTGRES_DB=diplom_db
+
+# Пользователь базы данных
+POSTGRES_USER=diplom_user
+
+# Пароль пользователя базы данных
+POSTGRES_PASSWORD=diplom_password
+
+# Хост БД:
+# - в Docker: db
+# - локально: localhost
+POSTGRES_HOST=db
+
+# Порт PostgreSQL 
+POSTGRES_PORT=5432
+
+#############################################
+# Настройки очереди (Celery + Redis)
+#############################################
+
+# URL брокера задач Celery (Redis по умолчанию)
+CELERY_BROKER_URL=redis://redis:6379/0
+
+# Хранилище результатов Celery (можно оставить таким же, как брокер)
+CELERY_RESULT_BACKEND=redis://redis:6379/0
+
+# Если выставить в True, Celery будет выполнять задачи синхронно (удобно для локальных тестов)
+#CELERY_TASK_ALWAYS_EAGER=True
+
+#############################################
+# Настройки почты (SMTP mail.ru)
+# Используются для отправки писем админу и пользователям
+#############################################
+
+# Django backend для отправки почты по SMTP
+EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+
+# SMTP-хост для mail.ru
+EMAIL_HOST=smtp.mail.ru
+
+# Порт SMTP (TLS)
+EMAIL_PORT=587
+
+# Использовать TLS (для mail.ru должно быть True)
+EMAIL_USE_TLS=True
+
+# Ваш почтовый адрес на mail.ru
+EMAIL_HOST_USER=your_mail@mail.ru
+
+# Пароль приложения для почты mail.ru
+EMAIL_HOST_PASSWORD=mail_ru_app_password
+
+# Адрес "от кого" в письмах (обычно тот же, что EMAIL_HOST_USER)
+DEFAULT_FROM_EMAIL=your_mail@mail.ru
+
+# Email администратора, на который будут приходить уведомления о новых документах
+ADMIN_EMAIL=admin@example.com
