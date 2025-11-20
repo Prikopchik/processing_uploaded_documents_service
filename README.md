@@ -16,28 +16,6 @@
 
 1. Создайте файл `.env` в корне проекта (можно взять за основу `.env.example`):
 
-```env
-SECRET_KEY=changeme
-DEBUG=1
-
-POSTGRES_DB=documents_db
-POSTGRES_USER=documents_user
-POSTGRES_PASSWORD=documents_password
-POSTGRES_HOST=db
-POSTGRES_PORT=5432
-
-CELERY_BROKER_URL=redis://redis:6379/0
-CELERY_RESULT_BACKEND=redis://redis:6379/0
-
-EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
-EMAIL_HOST=smtp.mail.ru
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER=your_mail@mail.ru
-EMAIL_HOST_PASSWORD=your_mail_ru_app_password
-DEFAULT_FROM_EMAIL=your_mail@mail.ru
-ADMIN_EMAIL=admin@example.com
-```
 
 2. Убедитесь, что в корне есть директория `media/` (в репозитории она присутствует пустой с `.gitkeep`). Все пользовательские файлы будут храниться в `media/documents/...`.
 
