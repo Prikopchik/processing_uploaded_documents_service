@@ -10,6 +10,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
+# Подготовим директории для собранных статических и медиа файлов
+RUN mkdir -p /app/media /app/staticfiles
+
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
